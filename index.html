@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional// 
+EN" "http://www.w3.org/TR/xhtml/DTD/xhtml-transitional.dtd">
+
+
+<!-- Mirrored from hi.au.dk/gintasview/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Apr 2018 14:45:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="gintasview, gintas, view, simulation"  />
+<meta name="description" content="OpenSource surgery simulations recording solution for medical education"   />
+<meta name="copyright" content="2015 copyright ginto.lt"  />
+<meta name="publisher" content="aarhus university"  />
+<meta name="author" content="ginto.lt design"  />
+<html>
+
+<head>
+  <link rel="stylesheet" href="responsiveslides.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="responsiveslides.min.js"></script>
+
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+
+$(document).ready(function () {	
+
+$("#liabout").click(function (){
+	$('html, body').animate({
+		scrollTop: $("#aboutsection").offset().top -80
+	}, 700);
+});	 
+$("#licontact").click(function (){
+	$('html, body').animate({
+		scrollTop: $("#contactsection").offset().top -80
+	}, 700);
+});	 
+
+$("#scrolldown").click(function (){
+	$('html, body').animate({
+		scrollTop: $("#aboutsection").offset().top -80
+	}, 700);
+});	 
+
+$("#up").click(function (){
+	$("#newssection").animate({
+	scrollTop: '-=130px'
+	}, 300);
+});	 
+
+$("#down").click(function (){
+	$("#newssection").animate({
+	scrollTop: '+=130px'
+	}, 300);
+});	 
+
+
+(function pulse(back) {
+$('#scrolldown img').animate(
+    {
+        width: (back) ? $('#scrolldown img').width() + 20 : $('#scrolldown img').width() - 20            
+    }, 700);
+$('#scrolldown').animate(
+    {          
+        'font-size': (back) ? '40px' : '56px',
+        opacity: (back) ? 1 : 0.5
+    }, 700, function(){pulse(!back)});
+})(false);
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() <= 300) {
+        $('#scrolldown').fadeIn();
+
+    } else {
+        $('#scrolldown').fadeOut();
+    }
+});
+
+});
+  </script>
+
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58782042-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body style="height:3000px; width:auto; background: #000000; background-attachment:fixed; font-family:district;">
+<div id="content" style="background-color:rgba(216, 216, 216, 0.2); height:100%; margin:-1% 0 0 0; color:#FFFFFF; width:100%;">
+	<div id="header" style="background-color:#2E2E2E; position:fixed; border-bottom:1px solid #1C1C1C; width:100%; z-index:9;">
+		<div id="headerleft" style="width:55%; text-align:right; float:left;">
+			<h1>GintasView official</h1>
+		</div>
+		<div id="headerright" style="width:33%; text-align:right; float:right; margin:2% 2% 0 0; position:relative;">
+			<ul style="display:inline;">
+				<li class="emptyli"></li>
+				<li id="liabout" >about</li>
+				<li class="emptyli"></li>
+				<li><a href="gintasview_install.zip" target="_blank" alt="">download</a></li>
+				<li class="emptyli"></li>
+				<li id="licontact" >contact</li>
+				<li class="emptyli"></li>
+			</ul>
+		</div>
+	</div>
+	<div id="section1" style="background:#8E8E8E url(images/background3.jpg) no-repeat center center; background-size: 100% auto; height:24%; text-align:center;">
+		<div style="padding-top:30%;vertical-align: bottom;" id="scrolldown" >
+			<span style="font-size:50px;">scroll down<br>to see more</span>
+			<div>
+			<img src="images/scroll.png" id="scrollimage" style="margin-bottom:50px;"/>
+			</div>
+		</div>
+	</div>
+	<div style="height:27%; width:100%; text-align:center; margin-top:25px;" id="aboutsection">
+<!-- Slideshow -->
+		<h1 >about GintasView</h1>
+		<p>GintasView is OpenSource AV solution supporting In Situ Simulation.</p>
+		<p>The system makes use of “off the shelf” hardware components which are widely available and easily replaced or expanded. The developed AV software and coding is contracted to be available as Copyleft Open Source to ensure low cost and a potential continues improvement and expansion of the AV system. </p>
+		<div style="width:20%; height:10%; float:left;"></div>
+		<div class="callbacks_container" style="width:55%;">
+		  <ul class="rslides" id="slider4">
+			<li>
+			  <img src="images/1.png" alt="">
+			  <p class="caption">User-friendly, easy to use interface</p>
+			</li>
+			<li>
+			  <img src="images/2.png" alt="">
+			  <p class="caption">4 screens compatibility</p>
+			</li>
+			<li>
+			  <img src="images/3.png" alt="">
+			  <p class="caption">Resizable screens</p>
+			</li>
+			<li>
+			  <img src="images/4.png" alt="">
+			  <p class="caption">Multi-function controlling</p>
+			</li>
+			<li>
+			  <img src="images/5.png" alt="">
+			  <p class="caption">Adaptive timeline</p>
+			</li>
+			<li>
+			  <img src="images/6.png" alt="">
+			  <p class="caption">Timetags</p>
+			</li>
+			<li>
+			  <img src="images/7.png" alt="">
+			  <p class="caption">Blurring screens</p>
+			</li>
+			<li>
+			  <img src="images/8.png" alt="">
+			  <p class="caption">Audio source selection</p>
+			</li>
+			<li>
+			  <img src="images/9.png" alt="">
+			  <p class="caption">Full screen compatibility</p>
+			</li>
+			<li>
+			  <img src="images/10.png" alt="">
+			  <p class="caption">Full screen compatibility</p>
+			</li>
+			<li>
+			  <img src="images/11.png" alt="">
+			  <p class="caption">Time-tagging</p>
+			</li>
+			<li>
+			  <img src="images/12.png" alt="">
+			  <p class="caption">All-devices compatible time-tagging</p>
+			</li>
+		  </ul>
+		</div>
+		<div style="width:20%; height:50%; float:right;" >
+			<h3>News</h3>
+			<div style="text-align:center; border:1px solid #FFF;" id="up"><img src="images/up.png" /></div>
+			<div id="newssectionwrapper" style="overflow:hidden; height:100%;">
+				<div id="newssection" style="overflow-y:auto; height:100%; width:100%; padding-right:18px;">
+					<p><span style="color:#A9D0F5;">19.08.2014</span> - more functionality: audio source selection, blur and fullscreen.</p>
+					<p><span style="color:#A9D0F5;">12.08.2014</span> - blurring function added.</p>
+					<p><span style="color:#A9D0F5;">08.08.2014</span> - changed icons to more stylish ones.</p>
+					<p><span style="color:#A9D0F5;">08.07.2014</span> - Official version: v1.3.</p>
+					<p><span style="color:#A9D0F5;">29.07.2014</span> - developed an installation file (script).</p>
+					<p><span style="color:#A9D0F5;">24.06.2014</span> - website design changed to "Aarhus University" style.</p>
+					<p><span style="color:#A9D0F5;">13.06.2014</span> - implemented the timetagging system.</p>
+					<p><span style="color:#A9D0F5;">03.06.2014</span> - added time (minutes:seconds) on timeline.</p>
+					<p><span style="color:#A9D0F5;">27.05.2014</span> - audio source selection added.</p>
+					<p><span style="color:#A9D0F5;">26.05.2014</span> - added a timeline. Videos can be skipped to certain time on a mouse click..</p>
+					<p><span style="color:#A9D0F5;">21.05.2014</span> - official version: v1.2.</p>
+					<p><span style="color:#A9D0F5;">20.05.2014</span> - possibility to resize videos on click.</p>
+					<p><span style="color:#A9D0F5;">05.05.2014</span> - stream of multiple videos when selecting only one video's date.</p>
+					<p><span style="color:#A9D0F5;">28.04.2014</span> - all 4 videos are playing synchronic.</p>
+					<p><span style="color:#A9D0F5;">24.04.2014</span> - skipping video to certain time added.</p>
+					<p><span style="color:#A9D0F5;">16.04.2014</span> - selection list added - possibility to choose which video to stream.</p>
+					<p><span style="color:#A9D0F5;">08.04.2014</span> - first corpses of the web-interface.</p>
+				</div>
+			</div>
+			<div style="text-align:center; border:1px solid #FFF;" id="down"><img src="images/down.png" /></div>
+		</div>
+		<div style="width:100%; text-align:center; position:relative; float:left;">
+			<a href="gintasview_install.zip" target="_blank" alt="">Download GintasView</a>
+		</div>
+	</div>
+	<div style="height:29%; width:100%; text-align:center; background-color:#FFF; color:#000;">
+		<h1>how-to</h1>
+		<h3>GintasView might be a little complicated to use at the beginning. </h3>
+		<div style="width:45%; height:82%; float: left; position: relative; border-right:1px solid #000; ">
+			<h2>installation</h3>
+			<h3>Before installing, make sure you have downloaded<br />Chrome browser for better performance.</h3>
+			<p>1. <a href="gintasview_install.zip" alt="" style="color:#000;text-decoration:underline;">Download GintasView *.zip file</a></p>
+			<p>2. Read <a href="README1.3.txt" target="_blank" alt="" style="color:#000;text-decoration:underline;">"README!"</a> file before you proceed.</p>
+			<p>3. Unpack downloaded file.</p>
+			<p>4. Run INSTALL.bat file.</p>
+			<p>5. Two softwares will be asked to install.</p>
+			<p>6. When installing "WAMP server", you will be asked to select default browser.</p>
+			<p>7. Navigate to "C:/Program Files (x86)/Google/Chrome/Application/" and select "Chrome".</p>
+			<p>8. Wait for files to be copied and black window disappear.</p>
+			<p><span style="font-weight:900;">>> You might also want to configure your smartphone or tablet to do time-tagging while recording.</span><br /><a href="AirPort_Express.pdf" target="_blank" alt="" style="color:#000;text-decoration:underline;">Follow this step-by-step to tutorial to learn how.</a></p>
+			<h3 style="font-weight:bold;" >Installation is done. More detailed step-by-step <br />instructions can be found in <a href="README1.3.txt" target="_blank" alt="" style="color:#000;text-decoration:underline;">"README!"</a> file.</h3>
+			<h3 style="font-weight:bold;" >Hardware set-up <a href="Hardware_for_GintasView.odt" target="_blank" alt="" style="color:#000;text-decoration:underline;">can be found here!</a></h3>
+		</div>
+		<div style="width:45%; height:82%; float: right; position: relative; border-left:1px solid #000; ">
+			<h2>usage</h2>
+			<h3>Before using the system, check if WAMP server is running (green icon)<br /> and you have a table called "timetags" in MySQL database.</h3>
+			<p>1. Make sure all four GoPro Hero3 cameras have the same date/time.</p>
+			<p>2. Make sure your Windows machine has the same time as cameras.</p>
+			<p>3. Turn on WiFi and connect all four cameras to the same remote control.</p>
+			<p>4. Check if remote control shows "4 CAMS READY" on screen.</p>
+			<p>5. Open your browser and navigate to <a href="http://localhost/tag.php" alt="" target="_blank" style="color:#000;text-decoration:underline;">time-tagging page.</a></p>
+			<p>6. At the same time, press "Record" button on remote and "Start" button on time-tagging page.</p>
+			<p>7. Tag times while recording by clicking "Tag time" button.</p>
+			<p>8. After recording is finished, at the same time press "Record" button on remote and "Stop" button on time-tagging page.</p>
+			<p>9. Click "Done" button. Your time-tags will be saved to database.</p>
+			<p>10. Open <a href="http://localhost/" alt=""  target="_blank" style="color:#000;text-decoration:underline;">localhost</a> page.</p>
+			<p>11. Select recorded video by date from the list.</p>
+			<p>12. Videos will be loaded together with time-tags.</p>
+			<h3 style="font-weight:bold;">If there are any problems, please contact us using the form below.</h3>
+		</div>
+	</div>
+	<div style="height:17%; width:100%; text-align:center;" id="contactsection">
+		<h1>contact us</h1>
+		<h3>noticed an error? questions, suggestions, any other problems?</h3>
+		<h2>please contact us!</h2>
+	<div id="formwrapper" name="formwrapper">
+		<form name="cform" class="contactForm" method="post" action="http://hi.au.dk/gintasview/mailus.php">
+			<div class="input_boxes">
+				<table align="center">
+					<tbody>
+							<tr>
+							<td align="center">
+								<div>
+									<textarea class="input" style="font:bold 16px korolev; width:100%;" rows="2" cols="10" autocomplete="off" type="text" id="name" value="" name="name" placeholder="name*:" maxlength="50" oninput="nameinput();"></textarea> 
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div>
+									<textarea class="input" style="font:bold 16px korolev; width:100%;" rows="2" cols="10" autocomplete="off" type="text" id="email" value="" name="email" placeholder="e-mail*:" maxlength="50" oninput="emailinput();"></textarea> 
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div>
+									<textarea class="input" style="font:bold 16px korolev; width:100%;" autocomplete="off" id="message" rows="5" cols="20" name="message" placeholder="message*:" maxlength="500" oninput="emailinput();"></textarea>
+								</div>
+							</td>
+						</tr>
+						<tr>
+						<td align="center">
+							<div id="submitformwrap">
+								<input class="submit" style="font:bold 16px korolev; width:100%; background-color:rgba(216, 216, 216, 0.2); color:#FFF; border:3px solid #FFF;" type="submit" name="submit" id="submitform" value="send"/>
+							</div>
+						</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+	<small hidden="" id="messageSent">
+		<h2 style="font-size:20px; font-weight:bold; color:#A9D0F5;">thank you!</h2>
+		<span style="font-size:16px;">we will review your message and will reply ASAP!</span>
+	</small>	
+	</div>
+	<div id="author" style="text-align:center; font-size:15px; position:relative; background-color:#BDBDBD; color:#000;">
+		<span style="color:#000;"><span style="font-family:Helvetica; font-size:15px;">&#169;</span> 2015. website designed and created by 
+			<a href="http://ginto.lt/" target="_blank" style="text-decoration:none; color:#FF00BF;">
+				<span style="font-weight:bold; font-size:16px;">ginto design</span>
+			</a>
+		</span>
+	</div>
+</div>
+<style>
+
+@font-face {
+    font-family: "korolev";
+    src: url(fonts/Korolev-Thin.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "district";
+    src: url(fonts/DistProTh.otf) format("truetype");
+}
+
+
+
+a {
+	outline: 0;
+	
+	-webkit-transition-property:color, text;
+	-webkit-transition-duration: 0.2s, 0.2s;
+	-webkit-transition-timing-function: linear, ease-in;
+
+	-moz-transition-property:color, text;
+	-moz-transition-duration:0.2s;
+	-moz-transition-timing-function: linear, ease-in;
+
+	-o-transition-property:color, text;
+	-o-transition-duration:0.2s;
+	-o-transition-timing-function: linear, ease-in;
+}
+
+
+a:hover {
+	color: #A9D0F5;
+	font-weight:900;
+}
+
+li {
+	margin:2px;
+	display:inline;
+	letter-spacing:0.05em;
+	
+	-webkit-transition-property:color, text;
+	-webkit-transition-duration: 0.2s, 0.2s;
+	-webkit-transition-timing-function: linear, ease-in;
+
+	-moz-transition-property:color, text;
+	-moz-transition-duration:0.2s;
+	-moz-transition-timing-function: linear, ease-in;
+
+	-o-transition-property:color, text;
+	-o-transition-duration:0.2s;
+	-o-transition-timing-function: linear, ease-in;
+}
+
+li:hover {
+	color: #A9D0F5;
+	font-weight:900;
+}
+
+.emptyli {
+	border:2px solid grey; 
+	border-radius:10px;
+	padding:0px 10px 0px 10px; 
+}
+
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+	.emptyli {
+		display:none;
+	}
+	
+	ul {
+	}
+	
+	li {
+		padding:15px 25px 5px 0;
+		line-height: 220%;
+		font-size: 20px;
+	}
+}
+</style>
+<script type="text/javascript" src="mailcheck.js"></script>
+</body>
+
+
+<!-- Mirrored from hi.au.dk/gintasview/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Apr 2018 14:55:53 GMT -->
+</html>
